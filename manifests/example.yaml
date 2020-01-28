@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: gitops-example
+  name: gitops-example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: gitops-example
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        run: gitops-example
+    spec:
+      containers:
+      - image: nginx
+        name: gitops-example
+        resources: {}
+status: {}
