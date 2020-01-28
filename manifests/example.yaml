@@ -4,6 +4,7 @@ metadata:
   labels:
     run: gitops-example
   name: gitops-example
+  namespace: simple-gitops
 spec:
   replicas: 1
   selector:
